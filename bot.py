@@ -11,7 +11,6 @@ from dotenv import load_dotenv #for accessing the .env file for secret api keys 
 
 ##Definitions:
 
-#iplist = ['86.175.200.30', '86.175.200.31', '86.175.200.32']
 tabcount = 0
 
 ##.env:
