@@ -20,14 +20,14 @@ import os
 import sys
 
 ##### Scraps old data
-if os.path.exists("IPs.txt"):
-        os.remove("IPs.txt")
+if os.path.exists("proxyiplist.txt"):
+        os.remove("proxyiplist.txt")
 #####
 
 # Sets up Selenium
 opts = FirefoxOptions()
 #opts.add_argument("--headless")
-driver = webdriver.Firefox(options=opts, executable_path='/home/sawyer/Documents/GitHub_Folder/Python/geckodriver/geckodriver')
+driver = webdriver.Firefox(options=opts, executable_path='/PATH/TO/GECKO/DRIVER')
 URL = ('https://geonode.com/free-proxy-list')
 
 
@@ -64,7 +64,7 @@ for y in range (2,12):
         
 
 
-        print(OutString, file=open('IPs.txt','a'))
+        print(OutString, file=open('proxyiplist.txt','a'))
 
     driver.find_element_by_xpath('//*[@id="proxy-per-page"]').click
     # /html/body/div[1]/div/div/main/div/div[2]/div[2]/div/div[2]/div[2]/label/select/option[1]
@@ -75,7 +75,7 @@ for y in range (2,12):
     time.sleep(2)
     
 
-#file.close() # closes IPs.txt
+#file.close() # closes proxyiplist.txt
 driver.close() # closes current selenium window
 driver.quit()  # closes current browser session
 
