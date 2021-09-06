@@ -1,5 +1,6 @@
 # Ads - Passive Income
 
+
 ### **Main Idea:**
 - Website With Ads;
 - Bots that visit the site (traffic);
@@ -8,6 +9,9 @@
 <hr>
 
 ### **Website:**
+Availabe @: https://brave-borg-4bfc98.netlify.app/
+Hosted Using: Netlify
+
 Hosted on Github Pages / Heroku / ~~Custom Hosting~~
 - This Means that github pages & heroku would be free - but with limited traffic
 
