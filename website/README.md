@@ -1,1 +1,0 @@
-this is a collection of pages that all have ads in them, this will be a central hub for the bots.
