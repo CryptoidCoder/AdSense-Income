@@ -9,7 +9,7 @@
 <hr>
 
 ### **Website:**
-Availabe @: https://brave-borg-4bfc98.netlify.app/
+Availabe @: https://adsense-income-cryptoidcoder.netlify.app/
 Hosted Using: Netlify
 
 Hosted on Github Pages / Heroku / ~~Custom Hosting~~
