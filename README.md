@@ -12,7 +12,7 @@
 Availabe @: https://adsense-income-cryptoidcoder.netlify.app/
 Hosted Using: Netlify
 
-Hosted on Github Pages / Heroku / ~~Custom Hosting~~
+Hosted on Github Pages / Heroku / Netlify / ~~Custom Hosting~~
 - This Means that github pages & heroku would be free - but with limited traffic
 
 - Would be multiple pages, each one with ads
