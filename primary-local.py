@@ -2,6 +2,7 @@
 from sys import platform
 import os
 import time
+import sys
 #########################
 
 ##Definitons:
@@ -29,10 +30,20 @@ def  readstatus(): #get current bot status from `status.txt` file
 #facilitate destruction of bot /server
 
 
+try: #make sre it has astatus.txt to start with
+    file = open("status.txt")
+    file.read()
+    file.close()
+except:
+    file = open("status.txt", "w")
+    file.write("Bot Not Running")
 
-
-#while True:
-for i in range (10):
-    if readstatus() == "Bot Not Running": #while no bot is running start a new one
-        os.startfile("bot-local.py")
-        time.sleep(0.5)
+while True:
+    if os.path.exists('exit'):
+        os.remove('exit')
+        sys.exit()
+    else:
+        print("No Exit File exists, carrying on.... \n")
+        if readstatus() == "Bot Not Running": #while no bot is running start a new one
+            os.system("python bot-local.py")
+            time.sleep(0.5)

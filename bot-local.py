@@ -2,6 +2,8 @@ from selenium import webdriver #for browser automation
 from selenium.webdriver.chrome.options import Options #for browser automation
 from selenium.webdriver.common.keys import Keys #for browser automation
 import time #for waiting
+import sys # for aborts
+import os.path #for file checks
 #########################
 
 ## Definitions:
@@ -18,13 +20,27 @@ def updatestatus(statusmessage): #make/ update a file with the current bot statu
     file.write(statusmessage)
     file.close()
 
+def addnewline(filename,text): #append text to a new line on a file
+    # Open the file in append & read mode ('a+')
+    with open(filename, "a+") as file_object:
+        # Move read cursor to the start of file.
+        file_object.seek(0)
+        # If file is not empty then append '\n'
+        data = file_object.read(100)
+        if len(data) > 0 :
+            file_object.write("\n")
+        # Append text at the end of file
+        file_object.write(text)
+        file_object.close()
+
 
 #Browser Functions:
 def openbrowser(): #openbrowser but no tabs or sites
-    global driver, chrome_options
-    chrome_options = Options()
-    chrome_options.add_experimental_option("detach", True)
-    driver = webdriver.Chrome(executable_path="D://Coding//Coding//chromedriver.exe", chrome_options=chrome_options)
+    global driver, options
+    options = Options()
+    options.add_experimental_option("detach", False)
+    options.add_argument('headless')
+    driver = webdriver.Chrome(executable_path="D://Coding//Coding//chromedriver.exe", chrome_options=options)
     
 def opengoogle(): #opens google in current tab
     driver.get("https://www.google.com") #go to google.com
@@ -62,11 +78,11 @@ def switchtabs(tab): #switch to a certian tab (but don't change it)
 
 
 
-
 updatestatus("Bot Running")
 openbrowser()
 changeoriginaltab("https://github.com")
 opennewtab("https://adsense-income-cryptoidcoder.netlify.app/")
+addnewline('logging.txt',"Visited 'https://adsense-income-cryptoidcoder.netlify.app/'")
 time.sleep(1)
 closebrowsertabs()
 updatestatus("Bot Not Running")
