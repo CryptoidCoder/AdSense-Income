@@ -1,15 +1,22 @@
 # Ads - Passive Income
 
+
+## **Branches:**
+### patching = the newest updates for the project
+### website = the website html for running the homemade adsite
+### local = a version that runs locally (not using AWS and not self replicating, etc)
+
+
 <hr>
 
-## Basic Idea:
+## **Basic Idea:**
 Make Bots visit websites that have ads,
 Those ads being viewed make me money,
 The bots will then grow & scale based on how much the bots are currently earning.
 
-<hr>><br>
+<hr><br>
 
-## Main Explanation On How We Would Do That:
+## **Main Explanation On How We Would Do That:**
 We have two main files (`bot-manager.py` & `bot.py`);
 
 `bot-manager.py`:
@@ -31,7 +38,7 @@ We have two main files (`bot-manager.py` & `bot.py`);
 
 <br>
 
-## Services We Would Use:
+## **Services We Would Use:**
 - Netlify / Github Pages  (Making Homemade AdSites)
 - AWS ECS (Running containers on)
 - AWS EC2 (Running Self Replication code?)
