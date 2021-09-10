@@ -1,51 +1,48 @@
 # Ads - Passive Income
 
-
-### **Main Idea:**
-- Website With Ads;
-- Bots that visit the site (traffic);
-- URL's that divert via the ads;
-
 <hr>
 
-### **Website:**
-Availabe @: https://adsense-income-cryptoidcoder.netlify.app/
-Hosted Using: Netlify
+## Basic Idea:
+Make Bots visit websites that have ads,
+Those ads being viewed make me money,
+The bots will then grow & scale based on how much the bots are currently earning.
 
-Hosted on Github Pages / Heroku / Netlify / ~~Custom Hosting~~
-- This Means that github pages & heroku would be free - but with limited traffic
+<hr>><br>
 
-- Would be multiple pages, each one with ads
+## Main Explanation On How We Would Do That:
+We have two main files (`bot-manager.py` & `bot.py`);
 
-<hr>
-
-### **Bots:**
-Hosted on AWS / Google Cloud
-- Scaleable
-- Different IP Addresses each time it visits the site
-- Python & Selinium
-
-Each time a bot is run:
-
-1) Check / Get New IP (Can't be the same as any that are on a centralized list (gh repo / Bitwarden Note {add the current ip and update file, meaning used IP's are always listed}) )
-
-2) Visit Dummy Sites (This is to deter Captcha Events); Facebook, Instagram, Cat Videos?
-
-3) Visit My site; Page 1 -> Page 2 -> Page 3. Etc... When on a page "randomly" click some of the links.
-- Minimum 10 Pages
-- 10000 Views Per Month
-- 50% Ad Click Rate
+`bot-manager.py`:
+- Runs on something locally (A home lab, Raspberry Pi, etc)
+- Facilitates the bots
+- Runs replications (Looks at money income Vs running costs, and self scales for maximum efficency.)
+- Rundown:
+- - Uses the AWS SDK to create & run a `bot.py` container.
+- - Does this with multiple contianers at once, therefore more ads are being viewed, therefore more money made.
 
 
 
-4) Visit Prebuilt, Pre-Existing Ad Sites: https://surveysatrap.com/get-paid-to-click/
+`bot.py`:
+- Runs in AWS (within a container)
+- Does teh actual ad visiting & clicking.
+- Rundown:
+- - That container will cycle through Proxy servers, using each IP address only once
+- - It will visit multiple ad pages on homemade sites, and multiple pre-existing ad sites.
 
-<hr>
+<br>
 
-### **Replication:**
-Is smart enough to see how much its making VS cost to upscale.
-- Looks up Using Google API how much has been made from ads (May have to calculate based on views&reports?)
-- Compares that to Cloud costs to scale by 2x,5x,10x,20x,50x,100x
-- If the scale-up cost is within 10% of the overall earnings then scale up.
+## Services We Would Use:
+- Netlify / Github Pages  (Making Homemade AdSites)
+- AWS ECS (Running containers on)
+- AWS EC2 (Running Self Replication code?)
+- Google AdSense (For the actual homemade ads)
+- AWS SNS (Requesting Scale-Ups Via SMS bots)
 
-<hr>
+
+
+## With Thanks To:
+### People Who Have Helped Me With This Project:
+- [Sawyer Bristol](https://github.com/LegitCamper)
+- [Jim Knowler](https://github.com/JimKnowler)
+- [ITWithLyam](https://github.com/itwithlyam)
+- [The HackHorsham Community](https://www.facebook.com/hackhorsham)
