@@ -59,13 +59,17 @@ def installs(): #?????
 ##Main Code:
 
 #Have a server / bot always running this code:
-#setup script? / custom machine image?
+#setup script? / custom machine image? / Heroku?
 
 
-#create bot (cloud provider CLI / API)
-#start bot (cloud provider CLI / API)
-#install everything(python,bw-cli,git)
-#get secrets from bw-cli
+#create bot (AWS SDK)
+#start bot (AWS SDK)
+#check the IP against a list & destroy it if necessary / update it
+
+#generate access (password /ssh)
+#ssh into the server
+
+#install everything(python,git)
 #git clone this repo
 #run the main bot code + make money!
 #facilitate destruction of bot /server
