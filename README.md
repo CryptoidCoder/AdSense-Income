@@ -1,5 +1,7 @@
 # Ads - Passive Income
 
+# THIS HAS MOVED TO A NEW REPO: [https://github.com/CryptoidCoder/Selenium-Ad-Clicker](https://github.com/CryptoidCoder/Selenium-Ad-Clicker)
+
 
 ## **Branches:**
 ### patching = the newest updates for the project
